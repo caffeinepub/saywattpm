@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 7,
   "summary": "SayWattPM - Voice-first project management app for electrical project managers with smart scheduling, permit tracking, crew management, and field-optimized features",
   "architectural_notes": [
     "Voice-first interaction model - primary input method across all features",
@@ -19,7 +19,6 @@
     "Landing page needs improvement - user experience issues reported"
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Hero background image showing electrical construction work site with conduit and equipment in warm lighting (landing-hero.dim_1920x1080.png)\n- Icon illustration of voice waveform in safety yellow on charcoal background (voice-icon.dim_128x128.png)\n- Icon illustration of hard hat with lightning bolt in orange and yellow (safety-icon.dim_128x128.png)",
   "existing_features": [
     {
       "id": "feature-create-material-cost-tracker-with-budget-vs-actual-that-allows-voice-logging-of-purchases-e-g-bought-200-feet-of-3-4-inch-emt-conduit-at-1-20-a-foot-from-home-depot-for-the-hospital-job-and-displays-running-budget-burn-rate",
@@ -74,6 +73,38 @@
       "title": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
       "reqIds": [
         "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-privacy-policy-page-accessible-at-privacy-route-that-displays-privacy-policy-content-in-a-clean-readable-format-consistent-with-the-construction-themed-design-using-the-existing-orange-charcoal-safety-yellow-color-palette",
+      "title": "Create a Privacy Policy page accessible at /privacy route that displays privacy policy content in a clean, readable format consistent with the construction-themed design using the existing orange/charcoal/safety yellow color palette",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-terms-of-service-page-accessible-at-terms-route-that-displays-terms-of-service-content-in-a-clean-readable-format-consistent-with-the-construction-themed-design-using-the-existing-orange-charcoal-safety-yellow-color-palette",
+      "title": "Create a Terms of Service page accessible at /terms route that displays terms of service content in a clean, readable format consistent with the construction-themed design using the existing orange/charcoal/safety yellow color palette",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-support-page-accessible-at-support-route-that-provides-contact-information-and-help-resources-in-a-clean-readable-format-consistent-with-the-construction-themed-design-using-the-existing-orange-charcoal-safety-yellow-color-palette",
+      "title": "Create a Support page accessible at /support route that provides contact information and help resources in a clean, readable format consistent with the construction-themed design using the existing orange/charcoal/safety yellow color palette",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-navigation-links-to-privacy-terms-and-support-pages-in-the-footer-section-of-the-landing-page-so-users-can-access-these-pages-before-authentication",
+      "title": "Add navigation links to Privacy, Terms, and Support pages in the footer section of the Landing page so users can access these pages before authentication",
+      "reqIds": [
+        "REQ-23"
       ],
       "version": 1
     }
@@ -257,6 +288,12 @@
       "reqIds": [
         "REQ-14"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Create /privacy, /terms, and /support pages for the website",
+      "reqIds": [],
       "status": "pending"
     }
   ],

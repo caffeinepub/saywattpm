@@ -1,5 +1,5 @@
 {
-  "frontend/src/App.tsx": "Main application component with TanStack Router setup that displays Landing page for unauthenticated users, ProfileSetup modal for first-time users, and AppLayout with dashboard/project routes for authenticated users.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup that includes public routes for Landing, Privacy, Terms, and Support pages, plus authenticated routes for Dashboard and ProjectDetail with ProfileSetup modal for first-time users.",
   "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including projects, user profiles, material purchases, change orders, safety incidents, tasks, permits, and check-ins with proper cache invalidation.",
   "frontend/src/components/layout/AppLayout.tsx": "Main layout component with header containing logo, user profile display, navigation buttons, logout functionality, footer with attribution, and floating voice input button.",
   "frontend/src/components/auth/ProfileSetup.tsx": "Modal dialog for first-time user profile setup that collects name, role, email, and phone with form validation and prevents dismissal until completed.",
@@ -11,6 +11,9 @@
   "frontend/src/index.css": "Global styles with construction-industry OKLCH color system featuring warm oranges, charcoal grays, and safety yellow with high-contrast typography and large touch targets for field use.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with construction-themed colors, bold typography scale with increased font weights, large touch target utilities, and custom spacing for field-optimized UI.",
   "frontend/src/components/auth/LoginButton.tsx": "Reusable authentication button component that handles login/logout with Internet Identity, displays loading states, and shows appropriate icons and text based on authentication status.",
-  "frontend/src/pages/Landing.tsx": "Pre-authentication landing page with hero section featuring construction-themed gradient, feature highlights showcasing voice logging, smart scheduling, and safety tracking, CTA section, and footer with social links and attribution.",
-  "frontend/src/main.tsx": "Application entry point that wraps the app with QueryClientProvider, InternetIdentityProvider, ThemeProvider, and Toaster for notifications."
+  "frontend/src/pages/Landing.tsx": "Pre-authentication landing page with hero section featuring construction-themed gradient, feature highlights showcasing voice logging, smart scheduling, and safety tracking, CTA section, and footer with links to Privacy, Terms, Support pages, social links, and attribution.",
+  "frontend/src/main.tsx": "Application entry point that wraps the app with QueryClientProvider, InternetIdentityProvider, ThemeProvider, and Toaster for notifications.",
+  "frontend/src/pages/Privacy.tsx": "Privacy Policy page with construction-themed design displaying comprehensive privacy information including data collection, usage, storage, sharing policies, and user rights with navigation back to home and footer links.",
+  "frontend/src/pages/Terms.tsx": "Terms of Service page with construction-themed design displaying comprehensive terms including acceptance, service use, voice data handling, prohibited activities, liability limitations, and termination policies with navigation back to home and footer links.",
+  "frontend/src/pages/Support.tsx": "Support page with construction-themed design displaying contact information (email and phone), FAQs, help resources (documentation, community forum, video tutorials), and additional support options with navigation back to home and footer links."
 }

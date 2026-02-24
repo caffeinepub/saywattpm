@@ -1,4 +1,5 @@
 import LoginButton from '../components/auth/LoginButton';
+import { Link } from '@tanstack/react-router';
 import { Mic, Calendar, Shield, Zap, Clock, DollarSign } from 'lucide-react';
 import { SiX, SiFacebook, SiLinkedin } from 'react-icons/si';
 
@@ -149,7 +150,7 @@ export default function Landing() {
       {/* Footer */}
       <footer className="bg-card border-t border-border py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-sm text-muted-foreground">
               © {currentYear} SayWattPM. All rights reserved.
             </div>
@@ -168,7 +169,17 @@ export default function Landing() {
               </a>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Privacy
+              </Link>
+              <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Terms
+              </Link>
+              <Link to="/support" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Support
+              </Link>
+              <span className="hidden md:inline text-muted-foreground">|</span>
               <a
                 href="https://twitter.com"
                 target="_blank"

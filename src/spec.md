@@ -1,13 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Fix login authentication issues and redesign the landing page with improved visuals and clear value proposition.
+**Goal:** Add Privacy Policy, Terms of Service, and Support pages to provide essential legal and help information to users.
 
 **Planned changes:**
-- Debug and fix Internet Identity authentication system to resolve login failures
-- Redesign landing page with improved visual hierarchy and construction-themed design
-- Add prominent login call-to-action button
-- Showcase key features (voice logging, smart scheduling, safety tracking) with feature highlights section
-- Ensure responsive design works on mobile and desktop
+- Create Privacy Policy page at /privacy route with readable content in construction-themed design
+- Create Terms of Service page at /terms route with readable content in construction-themed design
+- Create Support page at /support route with contact information and help resources in construction-themed design
+- Add footer links to Privacy, Terms, and Support pages on the Landing page
 
-**User-visible outcome:** Users can successfully log in using Internet Identity, and first-time visitors see an attractive landing page that clearly communicates the app's purpose for electrical project managers with prominent feature highlights and easy access to login.
+**User-visible outcome:** Users can access Privacy Policy, Terms of Service, and Support pages from the landing page footer before or after authentication, with all content displayed in a clean, high-contrast format consistent with the construction-themed design.

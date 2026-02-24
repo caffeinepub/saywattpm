@@ -1,68 +1,94 @@
 {
   "kind": "build_request",
-  "title": "Fix login issue and improve landing page",
-  "projectName": "SayWattPM",
-  "priority": "high",
+  "title": "Add Privacy, Terms, and Support pages",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-18",
-      "text": "Debug and fix the authentication system to resolve login failures - verify Internet Identity integration, AuthClient initialization, and identity state management in useInternetIdentity.ts are functioning correctly",
+      "id": "REQ-20",
+      "text": "Create a Privacy Policy page accessible at /privacy route that displays privacy policy content in a clean, readable format consistent with the construction-themed design using the existing orange/charcoal/safety yellow color palette",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-6"
         ],
         "quotes": [
-          "i cant log in"
+          "yoursite.com/privacy"
         ]
       },
       "acceptanceCriteria": [
-        "Users can successfully authenticate using Internet Identity",
-        "Login button triggers authentication flow without errors",
-        "Authenticated state persists across page refreshes",
-        "Error messages display when authentication fails"
+        "Privacy page is accessible at /privacy route",
+        "Page uses consistent AppLayout header and footer",
+        "Content is readable with high-contrast text for outdoor visibility",
+        "Page follows the construction-themed design system"
       ]
     },
     {
-      "id": "REQ-19",
-      "text": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
+      "id": "REQ-21",
+      "text": "Create a Terms of Service page accessible at /terms route that displays terms of service content in a clean, readable format consistent with the construction-themed design using the existing orange/charcoal/safety yellow color palette",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-6"
         ],
         "quotes": [
-          "can you make a better landing page"
+          "yoursite.com/terms"
         ]
       },
       "acceptanceCriteria": [
-        "Landing page displays before user authentication",
-        "Clear headline communicating the app's purpose for electrical PMs",
-        "Prominent 'Login with Internet Identity' button with high visual contrast",
-        "Feature highlights section showcasing 3-5 core capabilities",
-        "Responsive design works on mobile and desktop devices",
-        "Maintains construction-industry aesthetic with warm oranges, charcoal grays, and safety yellow accents"
+        "Terms page is accessible at /terms route",
+        "Page uses consistent AppLayout header and footer",
+        "Content is readable with high-contrast text for outdoor visibility",
+        "Page follows the construction-themed design system"
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "text": "Create a Support page accessible at /support route that provides contact information and help resources in a clean, readable format consistent with the construction-themed design using the existing orange/charcoal/safety yellow color palette",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "yoursite.com/support"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Support page is accessible at /support route",
+        "Page uses consistent AppLayout header and footer",
+        "Page includes contact information and help resources",
+        "Content is readable with high-contrast text for outdoor visibility",
+        "Page follows the construction-themed design system"
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "text": "Add navigation links to Privacy, Terms, and Support pages in the footer section of the Landing page so users can access these pages before authentication",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer on Landing page includes links to /privacy, /terms, and /support",
+        "Links are styled consistently with the construction-themed design",
+        "Links are easily tappable on mobile devices"
       ]
     }
   ],
   "constraints": [
-    "Do not modify backend/main.mo for these frontend-only fixes",
-    "Preserve existing useInternetIdentity.ts authentication logic structure",
-    "Maintain construction-themed color palette defined in frontend/index.css",
-    "Landing page must not interfere with authenticated dashboard routing"
+    "Pages must be accessible to both authenticated and unauthenticated users",
+    "Must maintain consistency with existing construction-themed design system (warm oranges, charcoal grays, safety yellow)",
+    "Must follow high-contrast text standards for outdoor visibility"
   ],
   "nonGoals": [
-    "Adding alternative authentication methods beyond Internet Identity",
-    "Creating marketing content or legal pages",
-    "Implementing user registration flows (Internet Identity handles this)",
-    "Adding animations or complex interactions to the landing page"
+    "Legal content generation - placeholder text is acceptable",
+    "Integration with external support ticketing systems",
+    "Contact form with backend submission"
   ],
   "imageRequirements": {
-    "required": [
-      "Hero background image showing electrical construction work site with conduit and equipment in warm lighting (landing-hero.dim_1920x1080.png)",
-      "Icon illustration of voice waveform in safety yellow on charcoal background (voice-icon.dim_128x128.png)",
-      "Icon illustration of hard hat with lightning bolt in orange and yellow (safety-icon.dim_128x128.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

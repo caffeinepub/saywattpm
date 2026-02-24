@@ -1,61 +1,88 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix login issue and improve landing page",
+  "title": "Add Privacy, Terms, and Support pages",
   "requirements": [
     {
-      "id": "REQ-18",
-      "summary": "Debug and fix the authentication system to resolve login failures - verify Internet Identity integration, AuthClient initialization, and identity state management in useInternetIdentity.ts are functioning correctly",
+      "id": "REQ-20",
+      "summary": "Create Privacy Policy page at /privacy route with construction-themed design",
       "acceptanceCriteria": [
-        "Users can successfully authenticate using Internet Identity",
-        "Login button triggers authentication flow without errors",
-        "Authenticated state persists across page refreshes",
-        "Error messages display when authentication fails"
+        "Privacy page is accessible at /privacy route",
+        "Page uses consistent AppLayout header and footer",
+        "Content is readable with high-contrast text for outdoor visibility",
+        "Page follows the construction-themed design system"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/hooks/useInternetIdentity.ts",
-          "operation": "modify",
-          "description": "Debug and fix authentication issues by verifying AuthClient initialization, checking for proper error handling in login/logout flows, ensuring identity state updates correctly, and adding console logging for troubleshooting authentication failures. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/auth/LoginButton.tsx",
+          "path": "frontend/src/pages/Privacy.tsx",
           "operation": "create",
-          "description": "Create a LoginButton component that properly handles authentication state transitions, displays appropriate loading states during login, shows error messages when authentication fails, and integrates with useInternetIdentity hook following the authorization component's usage pattern. Verify the component's usage instructions before implementing."
+          "description": "Create Privacy Policy page component that displays privacy policy content using the construction-themed design with warm oranges, charcoal grays, and safety yellow from the existing color palette. Use high-contrast text for outdoor visibility. Include placeholder privacy policy content in a clean, readable format with proper spacing and typography."
         },
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Update App.tsx to properly handle authentication state changes, ensure the router correctly responds to login/logout events, verify that authenticated routes are protected, and add error boundaries for authentication failures. Maintain existing profile setup modal logic."
+          "description": "Add /privacy route to the router configuration that renders the Privacy page component. Route should be accessible to both authenticated and unauthenticated users (public route, outside of AppLayout)."
         }
       ]
     },
     {
-      "id": "REQ-19",
-      "summary": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
+      "id": "REQ-21",
+      "summary": "Create Terms of Service page at /terms route with construction-themed design",
       "acceptanceCriteria": [
-        "Landing page displays before user authentication",
-        "Clear headline communicating the app's purpose for electrical PMs",
-        "Prominent 'Login with Internet Identity' button with high visual contrast",
-        "Feature highlights section showcasing 3-5 core capabilities",
-        "Responsive design works on mobile and desktop devices",
-        "Maintains construction-industry aesthetic with warm oranges, charcoal grays, and safety yellow accents"
+        "Terms page is accessible at /terms route",
+        "Page uses consistent AppLayout header and footer",
+        "Content is readable with high-contrast text for outdoor visibility",
+        "Page follows the construction-themed design system"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/Landing.tsx",
+          "path": "frontend/src/pages/Terms.tsx",
           "operation": "create",
-          "description": "Create a new Landing page component that displays before authentication with a hero section using the generated image frontend/public/assets/generated/landing-hero.dim_1920x1080.png as background, a clear headline targeting electrical project managers, a prominent Login with Internet Identity button with high contrast styling, and a features section showcasing voice logging (using frontend/public/assets/generated/voice-icon.dim_128x128.png), smart scheduling, and safety tracking (using frontend/public/assets/generated/safety-icon.dim_128x128.png). Use construction-themed colors from frontend/src/index.css and ensure responsive design for mobile and desktop."
+          "description": "Create Terms of Service page component that displays terms of service content using the construction-themed design with warm oranges, charcoal grays, and safety yellow from the existing color palette. Use high-contrast text for outdoor visibility. Include placeholder terms of service content in a clean, readable format with proper spacing and typography."
         },
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Wire the Landing page into the router as the default route when the user is not authenticated. Add route configuration that shows Landing for unauthenticated users and redirects to Dashboard after successful login. Ensure landing page does not interfere with authenticated dashboard routing."
+          "description": "Add /terms route to the router configuration that renders the Terms page component. Route should be accessible to both authenticated and unauthenticated users (public route, outside of AppLayout)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "summary": "Create Support page at /support route with contact information and help resources",
+      "acceptanceCriteria": [
+        "Support page is accessible at /support route",
+        "Page uses consistent AppLayout header and footer",
+        "Page includes contact information and help resources",
+        "Content is readable with high-contrast text for outdoor visibility",
+        "Page follows the construction-themed design system"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Support.tsx",
+          "operation": "create",
+          "description": "Create Support page component that displays contact information and help resources using the construction-themed design with warm oranges, charcoal grays, and safety yellow from the existing color palette. Use high-contrast text for outdoor visibility. Include sections for contact information (email, phone), FAQs, and help resources in a clean, readable format with proper spacing and typography."
         },
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Add any additional utility classes needed for the landing page hero section, feature cards, and call-to-action button styling while maintaining the existing construction-themed color palette (warm oranges, charcoal grays, safety yellow) defined in CSS variables."
+          "description": "Add /support route to the router configuration that renders the Support page component. Route should be accessible to both authenticated and unauthenticated users (public route, outside of AppLayout)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "summary": "Add footer navigation links to Privacy, Terms, and Support pages on Landing page",
+      "acceptanceCriteria": [
+        "Footer on Landing page includes links to /privacy, /terms, and /support",
+        "Links are styled consistently with the construction-themed design",
+        "Links are easily tappable on mobile devices"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Landing.tsx",
+          "operation": "modify",
+          "description": "Add footer section with navigation links to /privacy, /terms, and /support pages. Style links consistently with the construction-themed design using the existing color palette (warm oranges, charcoal grays, safety yellow). Ensure links are easily tappable on mobile devices with appropriate touch target sizes (minimum 44x44px). Position footer at the bottom of the Landing page."
         }
       ]
     }

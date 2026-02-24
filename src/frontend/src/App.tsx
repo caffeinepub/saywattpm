@@ -5,6 +5,9 @@ import AppLayout from './components/layout/AppLayout';
 import Dashboard from './pages/Dashboard';
 import ProjectDetail from './pages/ProjectDetail';
 import Landing from './pages/Landing';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Support from './pages/Support';
 import ProfileSetup from './components/auth/ProfileSetup';
 import { Loader2 } from 'lucide-react';
 
@@ -24,7 +27,7 @@ function RootComponent() {
   }
 
   if (!isAuthenticated) {
-    return <Landing />;
+    return <Outlet />;
   }
 
   if (showProfileSetup) {
@@ -38,9 +41,33 @@ const rootRoute = createRootRoute({
   component: RootComponent,
 });
 
-const indexRoute = createRoute({
+const landingRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
+  component: Landing,
+});
+
+const privacyRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/privacy',
+  component: Privacy,
+});
+
+const termsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/terms',
+  component: Terms,
+});
+
+const supportRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/support',
+  component: Support,
+});
+
+const dashboardRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/dashboard',
   component: Dashboard,
 });
 
@@ -50,7 +77,14 @@ const projectRoute = createRoute({
   component: ProjectDetail,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, projectRoute]);
+const routeTree = rootRoute.addChildren([
+  landingRoute,
+  privacyRoute,
+  termsRoute,
+  supportRoute,
+  dashboardRoute,
+  projectRoute,
+]);
 
 const router = createRouter({ routeTree });
 
