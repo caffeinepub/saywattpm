@@ -1,0 +1,60 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T02:59:26.253Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-18",
+        "summary": "Debug and fix the authentication system to resolve login failures - verify Internet Identity integration, AuthClient initialization, and identity state management in useInternetIdentity.ts are functioning correctly",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useInternetIdentity.ts",
+          "frontend/src/components/auth/LoginButton.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/auth/LoginButton.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Landing.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Landing.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/landing-hero.dim_1920x1080.png",
+    "frontend/public/assets/generated/safety-icon.dim_128x128.png",
+    "frontend/public/assets/generated/voice-icon.dim_128x128.png",
+    "frontend/src/App.tsx",
+    "frontend/src/components/auth/LoginButton.tsx",
+    "frontend/src/pages/Landing.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix login issue and improve landing page",
+  "requirements": [
+    {
+      "id": "REQ-18",
+      "summary": "Debug and fix the authentication system to resolve login failures - verify Internet Identity integration, AuthClient initialization, and identity state management in useInternetIdentity.ts are functioning correctly",
+      "acceptanceCriteria": [
+        "Users can successfully authenticate using Internet Identity",
+        "Login button triggers authentication flow without errors",
+        "Authenticated state persists across page refreshes",
+        "Error messages display when authentication fails"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useInternetIdentity.ts",
+          "operation": "modify",
+          "description": "Debug and fix authentication issues by verifying AuthClient initialization, checking for proper error handling in login/logout flows, ensuring identity state updates correctly, and adding console logging for troubleshooting authentication failures. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/auth/LoginButton.tsx",
+          "operation": "create",
+          "description": "Create a LoginButton component that properly handles authentication state transitions, displays appropriate loading states during login, shows error messages when authentication fails, and integrates with useInternetIdentity hook following the authorization component's usage pattern. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update App.tsx to properly handle authentication state changes, ensure the router correctly responds to login/logout events, verify that authenticated routes are protected, and add error boundaries for authentication failures. Maintain existing profile setup modal logic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
+      "acceptanceCriteria": [
+        "Landing page displays before user authentication",
+        "Clear headline communicating the app's purpose for electrical PMs",
+        "Prominent 'Login with Internet Identity' button with high visual contrast",
+        "Feature highlights section showcasing 3-5 core capabilities",
+        "Responsive design works on mobile and desktop devices",
+        "Maintains construction-industry aesthetic with warm oranges, charcoal grays, and safety yellow accents"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Landing.tsx",
+          "operation": "create",
+          "description": "Create a new Landing page component that displays before authentication with a hero section using the generated image frontend/public/assets/generated/landing-hero.dim_1920x1080.png as background, a clear headline targeting electrical project managers, a prominent Login with Internet Identity button with high contrast styling, and a features section showcasing voice logging (using frontend/public/assets/generated/voice-icon.dim_128x128.png), smart scheduling, and safety tracking (using frontend/public/assets/generated/safety-icon.dim_128x128.png). Use construction-themed colors from frontend/src/index.css and ensure responsive design for mobile and desktop."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Landing page into the router as the default route when the user is not authenticated. Add route configuration that shows Landing for unauthenticated users and redirects to Dashboard after successful login. Ensure landing page does not interfere with authenticated dashboard routing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add any additional utility classes needed for the landing page hero section, feature cards, and call-to-action button styling while maintaining the existing construction-themed color palette (warm oranges, charcoal grays, safety yellow) defined in CSS variables."
+        }
+      ]
+    }
+  ]
+}

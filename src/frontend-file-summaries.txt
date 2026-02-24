@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup that displays Landing page for unauthenticated users, ProfileSetup modal for first-time users, and AppLayout with dashboard/project routes for authenticated users.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including projects, user profiles, material purchases, change orders, safety incidents, tasks, permits, and check-ins with proper cache invalidation.",
+  "frontend/src/components/layout/AppLayout.tsx": "Main layout component with header containing logo, user profile display, navigation buttons, logout functionality, footer with attribution, and floating voice input button.",
+  "frontend/src/components/auth/ProfileSetup.tsx": "Modal dialog for first-time user profile setup that collects name, role, email, and phone with form validation and prevents dismissal until completed.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page displaying hero section, quick stats cards, active projects list, upcoming deadlines with urgency indicators, pending change orders, and quick action buttons.",
+  "frontend/src/pages/ProjectDetail.tsx": "Project detail page with comprehensive project information, quick info cards, tabbed interface for overview/materials/safety/permits/crew/photos, and budget summary with burn rate visualization.",
+  "frontend/src/components/projects/CreateProjectDialog.tsx": "Dialog component for creating new projects with form fields for name, location, client, contractor, value, and notes with validation and toast notifications.",
+  "frontend/src/components/materials/MaterialCostTracker.tsx": "Material cost tracking component with budget summary, burn rate visualization, purchase logging form, and purchase history display with supplier and cost details.",
+  "frontend/src/components/safety/SafetyIncidentLog.tsx": "Safety incident logging component with incident reporting form, timestamp display, and incident history with destructive styling for visibility.",
+  "frontend/src/index.css": "Global styles with construction-industry OKLCH color system featuring warm oranges, charcoal grays, and safety yellow with high-contrast typography and large touch targets for field use.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with construction-themed colors, bold typography scale with increased font weights, large touch target utilities, and custom spacing for field-optimized UI.",
+  "frontend/src/components/auth/LoginButton.tsx": "Reusable authentication button component that handles login/logout with Internet Identity, displays loading states, and shows appropriate icons and text based on authentication status.",
+  "frontend/src/pages/Landing.tsx": "Pre-authentication landing page with hero section featuring construction-themed gradient, feature highlights showcasing voice logging, smart scheduling, and safety tracking, CTA section, and footer with social links and attribution.",
+  "frontend/src/main.tsx": "Application entry point that wraps the app with QueryClientProvider, InternetIdentityProvider, ThemeProvider, and Toaster for notifications."
+}

@@ -1,0 +1,267 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "SayWattPM - Voice-first project management app for electrical project managers with smart scheduling, permit tracking, crew management, and field-optimized features",
+  "architectural_notes": [
+    "Voice-first interaction model - primary input method across all features",
+    "Multi-tier freemium monetization: Free, Pro ($29/mo), Team ($49/mo), Enterprise ($99/mo)",
+    "Real-time crew availability tracking and conflict detection system",
+    "Weather API integration for outdoor task scheduling",
+    "CarPlay/Android Auto integration for driving mode",
+    "Photo storage with voice annotation and task auto-creation",
+    "NEC (National Electrical Code) compliance checklist library",
+    "Multi-channel notification system (email, push, persistent)",
+    "Budget tracking with running burn rate calculations",
+    "Time tracking with auto check-in/check-out functionality"
+  ],
+  "known_issues": [
+    "User unable to log in - authentication system needs debugging",
+    "Landing page needs improvement - user experience issues reported"
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Hero background image showing electrical construction work site with conduit and equipment in warm lighting (landing-hero.dim_1920x1080.png)\n- Icon illustration of voice waveform in safety yellow on charcoal background (voice-icon.dim_128x128.png)\n- Icon illustration of hard hat with lightning bolt in orange and yellow (safety-icon.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-material-cost-tracker-with-budget-vs-actual-that-allows-voice-logging-of-purchases-e-g-bought-200-feet-of-3-4-inch-emt-conduit-at-1-20-a-foot-from-home-depot-for-the-hospital-job-and-displays-running-budget-burn-rate",
+      "title": "Create Material Cost Tracker with Budget vs Actual that allows voice-logging of purchases (e.g., 'Bought 200 feet of 3/4 inch EMT conduit at $1.20 a foot from Home Depot for the hospital job') and displays running budget burn rate",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-safety-incident-quick-log-that-allows-voice-reporting-of-safety-issues-e-g-near-miss-on-the-hospital-site-tom-tripped-over-unmarked-conduit-run-in-hallway-b-need-to-add-temporary-lighting-creates-timestamped-incident-reports-and-flags-for-review",
+      "title": "Implement Safety Incident Quick-Log that allows voice reporting of safety issues (e.g., 'Near-miss on the hospital site, Tom tripped over unmarked conduit run in hallway B, need to add temporary lighting'), creates timestamped incident reports, and flags for review",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-professional-frontend-ui-with-a-bold-construction-industry-aesthetic-using-warm-oranges-deep-charcoal-grays-and-safety-yellow-accents-with-a-focus-on-large-touch-targets-high-contrast-text-for-field-visibility-and-a-rugged-no-nonsense-layout-that-prioritizes-speed-and-voice-interaction-over-visual-decoration",
+      "title": "Design a professional frontend UI with a bold, construction-industry aesthetic using warm oranges, deep charcoal grays, and safety yellow accents with a focus on large touch targets, high-contrast text for field visibility, and a rugged, no-nonsense layout that prioritizes speed and voice interaction over visual decoration",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dashboard-view-that-displays-upcoming-project-deadlines-today-s-scheduled-site-visits-with-drive-times-active-permits-requiring-attention-crew-assignments-for-the-week-recent-safety-incidents-and-quick-access-voice-input-button",
+      "title": "Create a dashboard view that displays: upcoming project deadlines, today's scheduled site visits with drive times, active permits requiring attention, crew assignments for the week, recent safety incidents, and quick-access voice input button",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-project-detail-view-that-displays-all-project-information-permits-inspections-crew-assignments-material-costs-vs-budget-change-orders-communications-photos-safety-incidents-and-nec-checklists-in-organized-tabs-or-sections",
+      "title": "Build a project detail view that displays all project information, permits, inspections, crew assignments, material costs vs budget, change orders, communications, photos, safety incidents, and NEC checklists in organized tabs or sections",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-fix-the-authentication-system-to-resolve-login-failures-verify-internet-identity-integration-authclient-initialization-and-identity-state-management-in-useinternetidentity-ts-are-functioning-correctly",
+      "title": "Debug and fix the authentication system to resolve login failures - verify Internet Identity integration, AuthClient initialization, and identity state management in useInternetIdentity.ts are functioning correctly",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-landing-page-pre-authentication-view-with-improved-visual-hierarchy-clear-value-proposition-for-electrical-project-managers-prominent-login-call-to-action-and-showcase-key-features-voice-logging-smart-scheduling-safety-tracking-with-construction-themed-visuals-consistent-with-the-existing-orange-charcoal-safety-yellow-color-palette",
+      "title": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Smart Permit & Inspection Tracker with voice logging and auto-reminders",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Crew Conflict Detection for real-time availability across projects",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Weather-Aware Scheduling with forecast integration for outdoor tasks",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Mileage & Drive Time Tracking with auto-logging and scheduling integration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Voice-Activated Job Site Check-In/Check-Out with time logging",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Photo + Voice Annotation with auto task creation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Material Cost Tracker with Budget vs Actual and voice logging",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Change Order Management with voice creation and approval workflow",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Safety Incident Quick-Log with voice reporting and timestamping",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Client Communication Log with voice entry and timeline updates",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Escalating Smart Reminders System with multi-channel notifications",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Driving Mode Dashboard with CarPlay/Android Auto integration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "End-of-Day Voice Summary with AI-generated reports",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Code Compliance Checklists with NEC templates and voice check-offs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Create a project management system that stores electrical projects with fields: project name, location, status, start date, estimated completion date, client name, general contractor, project value, and notes",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Implement Smart Permit & Inspection Tracker that tracks permit status, renewal dates, and inspection results with voice logging capability (e.g., 'Rough-in inspection passed on Riverside, inspector was Dave Morris')",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Build Crew Conflict Detection that checks crew member availability across all projects and flags scheduling conflicts in real-time when assigning crew to tasks",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Implement Weather-Aware Scheduling that flags outdoor electrical tasks (site lighting, underground runs, solar installations) when weather conditions may impact work",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Create Mileage & Drive Time Tracking that auto-logs mileage between job sites and factors drive time into daily scheduling",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Build Voice-Activated Job Site Check-In/Check-Out system that timestamps arrival/departure, pulls up project dashboard, and auto-logs time spent on site",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Implement Photo + Voice Annotation feature that allows PMs to snap a photo, voice-annotate the issue (e.g., 'Panel box in room 304, wrong breaker size, need to swap to 40 amp'), auto-create a task, and notify crew",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Build Change Order Management system that allows voice-creation of change orders (e.g., 'Client wants 4 additional EV charger stations in the parking garage, estimated $18K additional'), logs changes, adjusts project value, and creates approval workflow",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Create Client Communication Log that allows voice-logging of client/GC conversations (e.g., 'Just spoke with the GC on Riverside, they want weekly progress photos and pushed the final walkthrough to April 10th'), auto-updates project timeline, and sets new reminders",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Build Escalating Smart Reminders System with multi-stage notifications: 90 days (monthly), 60 days (bi-weekly), 30 days (weekly + crew alerts), 14 days (every 3 days), 7 days (daily), 3 days (morning + afternoon), day-of (persistent)",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Implement End-of-Day Voice Summary feature that generates an AI-powered daily report from all voice entries, check-ins, task completions, and provides it via dashboard",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Create Code Compliance Checklists with pre-built NEC (National Electrical Code) templates by project type that allow voice check-offs (e.g., 'NEC 210.12 — AFCI protection verified for bedroom circuits in Building A')",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SayWattPM",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

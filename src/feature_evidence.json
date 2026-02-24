@@ -1,0 +1,49 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-debug-and-fix-the-authentication-system-to-resolve-login-failures-verify-internet-identity-integration-authclient-initialization-and-identity-state-management-in-useinternetidentity-ts-are-functioning-correctly",
+      "featureTitle": "Debug and fix the authentication system to resolve login failures - verify Internet Identity integration, AuthClient initialization, and identity state management in useInternetIdentity.ts are functioning correctly",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/auth/LoginButton.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "http-outcalls@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-landing-page-pre-authentication-view-with-improved-visual-hierarchy-clear-value-proposition-for-electrical-project-managers-prominent-login-call-to-action-and-showcase-key-features-voice-logging-smart-scheduling-safety-tracking-with-construction-themed-visuals-consistent-with-the-existing-orange-charcoal-safety-yellow-color-palette",
+      "featureTitle": "Redesign the landing page (pre-authentication view) with improved visual hierarchy, clear value proposition for electrical project managers, prominent login call-to-action, and showcase key features (voice logging, smart scheduling, safety tracking) with construction-themed visuals consistent with the existing orange/charcoal/safety yellow color palette",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Landing.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "http-outcalls@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
